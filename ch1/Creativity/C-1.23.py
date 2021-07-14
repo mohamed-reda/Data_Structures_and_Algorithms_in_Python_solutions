@@ -5,8 +5,9 @@ is out of bounds, the program should catch the exception that results, and
 print the following error message:
 “Don’t try buffer overflow attacks in Python!”
 """
-l = []
-# try:
-#
-#
-# except:
+l = [1, 2, 3]
+try:
+    l[5] = 23
+
+except IndexError:
+    print("Don't try buffer overflow attacks in Python!")
